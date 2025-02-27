@@ -10,11 +10,91 @@
    <head>
      <meta charset="utf-8">
      <title>Revisão - Programação III - 2025</title>
+     <style>
+      .caixa{
+        border-style: solid;
+        border-width: 1px;
+      }
+     </style>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
    </head>
    <body>
-    <p>Hello Worldiiiiiii .....................................</p>
-   </body> 
-   <footer>
+    <h1 style="text-align: center;">Cadastro de Veículos</h1>
+    <div>
 
-   </footer>
+    
+      <div style="width: 71%; margin: 5px;" class="caixa">
+        <div>
+
+          <div style="float: left; margin-right: 10px;">
+            <label for="">Código:</label><br>
+            <label for="">Modelo:</label>
+          </div>
+          <div style="float: left;">
+            <input id="campoCodigo" type="number"><br>
+            <input id="campoModelo" type="text" size="50">
+          </div>
+
+        </div>
+          
+          
+      </div>
+     
+      <div style="clear: both; float: left; width: 35%; height: 40%; margin: 5px;" class="caixa">
+       
+        <div style="margin: 2px;">
+          <div style="float: left;margin-right: 10px;">
+            <label for="">Situação:</label><br>
+            <label for="">Valor:</label><br>
+            <label for="">Data:</label><br>
+          </div>
+          <div style="float: left;">
+              <input id="campoSituacao" type="checkbox"><br>
+              <input id="campoValor" type="number" step="0.1"><br>
+              <input id="campoValor" type="date">
+          </div>
+
+        </div>
+      </div>
+      <div style="float: left; width: 35%; height: 40%; margin: 5px;" class="caixa">
+        <div style="margin: 2px;">
+          <div style="float: left;margin-right: 10px;">
+            <label for="">Observações:</label><br>
+          
+          </div>
+          <div style="float: left;">
+              <textarea name="" id="" rows="4" cols="35"></textarea>
+             
+          </div>
+
+        </div>
+      </div>
+      <div style="clear: both;margin-left: 30%;">
+          <button id="btnCadastrar">Cadastrar</button>
+          <button id="btnLimpar">Limpar</button>
+      </div>
+
+    </div>
+    </body>
+    <script type="text/javascript">
+
+        $("#btnCadastrar").click(function(){
+        
+            var campo_codigo = document.getElementById("campoCodigo"); 
+            if(campo_codigo > 0 && campo_codigo <= 10000){
+              //verificar a possibilidade do campo_codigo contiver letras...
+            }else{
+              alert("Código inválido !!!");
+            }
+
+
+              
+       });
+
+       $("#btnLimpar").click(function(){
+        
+        alert("clicou no LIMPAR!!");
+      });
+    
+    </script>
 </html>
